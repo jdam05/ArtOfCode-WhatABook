@@ -71,6 +71,13 @@ dune = {
 	bookId: "9780143111580",
 };
 
+hellstromsHive = {
+	title: "HellstromsHive",
+	genre: "Sci-Fi",
+	author: "Frank Herbert",
+	bookId: "0765317729",
+};
+
 thinkAndGrowRich = {
 	title: "Think and Grow Rich",
 	genre: "Self-Help",
@@ -92,11 +99,46 @@ shutterIsland = {
 	bookId: "0061898813",
 };
 
+theGivenDay = {
+	title: "Shutter Island",
+	genre: "Mystery",
+	author: "Dennis Lehane",
+	bookId: "0380731878",
+};
+
 theHobbit = {
 	title: "The Hobbit",
 	genre: "Fantasy",
 	author: "J. R. R. Tolkien",
 	bookId: "054792822X",
+};
+
+theSilmarillion = {
+	title: "The Silmarillion",
+	genre: "Fantasy",
+	author: "J. R. R. Tolkien",
+	bookId: "0544338014",
+};
+
+theBookOfLostTales = {
+	title: "The Book of Lost Tales",
+	genre: "Fantasy",
+	author: "J. R. R. Tolkien",
+	bookId: "0395409276",
+};
+
+tomorrowAndTomorrowAndTomorrow = {
+	title: "Tomorrow, and Tomorrow, and Tomorrow",
+	genre: "Romance",
+	author: "Gabrielle Zevin",
+	bookId: "0593321200",
+};
+
+theRoadToChristmas = {
+	title: "The Road to Christmas",
+	genre: "Romance",
+	author: "Sheila Roberts",
+	bookId: "0778386562",
 };
 
 // Inserting the documents
@@ -106,6 +148,12 @@ db.books.insertOne(thinkAndGrowRich);
 db.books.insertOne(theArtOfLoving);
 db.books.insertOne(shutterIsland);
 db.books.insertOne(theHobbit);
+db.books.insertOne(theSilmarillion);
+db.books.insertOne(theBookOfLostTales);
+db.books.insertOne(hellstromsHive);
+db.books.insertOne(theGivenDay);
+db.books.insertOne(tomorrowAndTomorrowAndTomorrow);
+db.books.insertOne(theRoadToChristmas);
 
 // Customers
 baugh = {
