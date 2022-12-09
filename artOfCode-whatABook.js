@@ -56,7 +56,6 @@ db.createCollection("customers", {
 });
 
 // Books
-
 theArtOfWar = {
 	title: "The Art Of War",
 	genre: "Military Treatise",
@@ -141,7 +140,7 @@ theRoadToChristmas = {
 	bookId: "0778386562",
 };
 
-// Inserting the documents
+// Inserting book documents
 db.books.insertOne(theArtOfWar);
 db.books.insertOne(dune);
 db.books.insertOne(thinkAndGrowRich);
@@ -170,5 +169,17 @@ damir = {
 	wishlist: [],
 };
 
+// Inserting customer documents
 db.customers.insertOne(baugh);
 db.customers.insertOne(damir);
+
+// Queries:
+
+// Displaying list of books
+db.books.find();
+// Displaying books by genre
+db.books.find({ genre: "Fantasy" });
+// Displaying books by author
+db.books.find({ author: "Sun Tzu" });
+// Displaying books by bookId
+db.books.find({ bookId: "1599869772" });
