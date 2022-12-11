@@ -2,8 +2,8 @@
 	Title: artOfCode-whatABook.js
     Authors: * Jamal Damir
              * Ace Baugh
-    Date: 12/07/2022
-    Description: MongoDB Shell Scripts for the books and customers collections.
+   Date: 12/07/2022
+   Description: MongoDB Shell Scripts for the books and customers collections.
  */
 
 // Delete the books and customers collections.
