@@ -37,7 +37,7 @@ print("|| * (1) View our entire book selection.                                 
 print("|| * (2) View books by genre.                                             ||")
 print("|| * (3) View books by author.                                            ||")
 print("|| * (4) View books by ID.                                                ||")
-print("|| * (5) View books by title.                                             ||")
+print("||                                                                        ||")
 print(" \\                                 ____                                  //")
 print("    * ***************************************************************** *   ")
 print("")

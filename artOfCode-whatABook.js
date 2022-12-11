@@ -156,17 +156,55 @@ db.books.insertOne(theRoadToChristmas);
 
 // Customers
 baugh = {
-	firstName: "Ace",
-	lastName: "Baugh",
-	customerId: "c1001",
-	wishlist: [],
+	firstName: 'Ace',
+	lastName: 'Baugh',
+	customerId: 'c1001',
+	wishlist: [
+		{
+			title: 'The Art Of War',
+			genre: 'Military Treatise',
+			author: 'Sun Tzu',
+			bookId: '1599869772',
+		},
+		{
+			title: 'Dune (Penguin Galaxy)',
+			genre: 'Sci-Fi',
+			author: 'Frank Herbert',
+			bookId: '9780143111580',
+		},
+		{
+			title: 'Think and Grow Rich',
+			genre: 'Self-Help',
+			author: 'Napoleon Hill',
+			bookId: '1515406830',
+		},
+	],
 };
 
 damir = {
-	firstName: "Jamal",
-	lastName: "Damir",
-	customerId: "c1002",
-	wishlist: [],
+	firstName: 'Jamal',
+	lastName: 'Damir',
+	customerId: 'c1002',
+	wishlist: [
+		{
+			title: 'The Art of Loving',
+			genre: 'Self-Help',
+			author: 'Erich Fromm',
+			bookId: '0061129739',
+		},
+		{
+			title: 'Shutter Island',
+			genre: 'Mystery',
+			author: 'Dennis Lehane',
+			bookId: '0061898813',
+		},
+		{
+			title: 'The Hobbit',
+			genre: 'Fantasy',
+			author: 'J. R. R. Tolkien',
+			bookId: '054792822X',
+		},
+	],
 };
 
 // Inserting customer documents
