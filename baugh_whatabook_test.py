@@ -44,18 +44,18 @@ def genre_search():
       print("")
       print("   * *****************************     ****************************** *    ")
       print(" //                   ********************************                    \\\\")
-      print("||                 ******** Welcome to WhatABook ********                 ||")
-      print("||              *********************************************             ||")
-      print("||                                 ----                                   ||")
-      print("||                              | Genres |                                ||")
-      print("||                                 ----                                   ||")
-      print("||    -  Please type-in the corresponding number to select an option! -   ||")
-      print("||                                 ----                                   ||")
-      print("||                                                                        ||")
+      print("││                 ******** Welcome to WhatABook ********                 ││")
+      print("││              *********************************************             ││")
+      print("││                              ┌────────┐                                ││")
+      print("││                              │ Genres │                                ││")
+      print("││                              └────────┘                                ││")
+      print("││    -  Please type-in the corresponding number to select an option! -   ││")
+      print("││                                 ----                                   ││")
+      print("││                                                                        ││")
       for i in range(len(genres)):
-         print("|| * (",i+1,")", genres[i]) 
-      print("|| * ( b ) to go back to the main menu                                    || ")
-      print("||                                                                        ||")
+         print("││ * (",i+1,")", genres[i]) 
+      print("││ * ( b ) to go back to the main menu                                    ││ ")
+      print("││                                                                        ││")
       print(" \\\\                                 ____                                  //")
       print("    * ***************************************************************** *   ")
       print("")
@@ -75,10 +75,10 @@ def genre_search():
          if int(selected_genre) <= len(genres):
             print("\n" + "   *** Books with Genre: ", genres[int(selected_genre)-1], " ***" + "\n" )
             for book in books_col.find({"genre": genres[int(selected_genre)-1]}):
-               print("\n" + " - Book Title: ", book["title"] + "\n"
-                  " - Genre:      ", book["genre"] + "\n"
-                  " - Author:     " , book["author"] + "\n"
-                  " - Book ID:    ", book["bookId"] + "\n"
+               print("\n" + " ┌───╗ Book Title: ", book["title"] + "\n"
+                  " │   ║ Genre:      ", book["genre"] + "\n"
+                  " │   ║ Author:     " , book["author"] + "\n"
+                  " └═══╝ Book ID:    ", book["bookId"] + "\n"
                   "\n"
                   "       ********   ")
          else:
@@ -109,18 +109,18 @@ def author_search():
       print("")
       print("   * *****************************     ****************************** *    ")
       print(" //                   ********************************                    \\\\")
-      print("||                 ******** Welcome to WhatABook ********                 ||")
-      print("||              *********************************************             ||")
-      print("||                                 ----                                   ||")
-      print("||                             | Authors |                                ||")
-      print("||                                 ----                                   ||")
-      print("||    -  Please type-in the corresponding number to select an option! -   ||")
-      print("||                                 ----                                   ||")
-      print("||                                                                        ||")
+      print("││                 ******** Welcome to WhatABook ********                 ││")
+      print("││              *********************************************             ││")
+      print("││                             ┌─────────┐                                ││")
+      print("││                             │ Authors │                                ││")
+      print("││                             └─────────┘                                ││")
+      print("││    -  Please type-in the corresponding number to select an option! -   ││")
+      print("││                                 ----                                   ││")
+      print("││                                                                        ││")
       for i in range(len(authors)):
-         print("|| * (",i+1,")", authors[i]) 
-      print("|| * ( b ) to go back to the main menu                                    || ")
-      print("||                                                                        ||")
+         print("││ * (",i+1,")", authors[i]) 
+      print("││ * ( b ) to go back to the main menu                                    ││ ")
+      print("││                                                                        ││")
       print(" \\\\                                 ____                                  //")
       print("    * ***************************************************************** *   ")
       print("")
@@ -140,10 +140,10 @@ def author_search():
          if int(selected_author) <= len(authors):
             print("\n" + "   *** Books by Author: ", authors[int(selected_author)-1], " ***" + "\n" )
             for book in books_col.find({"author": authors[int(selected_author)-1]}):
-               print("\n" + " - Book Title: ", book["title"] + "\n"
-                  " - Genre:      ", book["genre"] + "\n"
-                  " - Author:     " , book["author"] + "\n"
-                  " - Book ID:    ", book["bookId"] + "\n"
+               print("\n" + " ┌───╗ Book Title: ", book["title"] + "\n"
+                  " │   ║ Genre:      ", book["genre"] + "\n"
+                  " │   ║ Author:     " , book["author"] + "\n"
+                  " └═══╝ Book ID:    ", book["bookId"] + "\n"
                   "\n"
                   "       ********   ")
          else:
@@ -169,16 +169,16 @@ def wishlist_search():
       print("")
       print("   * *****************************     ****************************** *    ")
       print(" //                   ********************************                    \\\\")
-      print("||                 ******** Welcome to WhatABook ********                 ||")
-      print("||              *********************************************             ||")
-      print("||                                 ----                                   ||")
-      print("||                            | Wish Lists |                              ||")
-      print("||                                 ----                                   ||")
-      print("||       -  Please enter the customer Id to see their wish list! -        ||")
-      print("||                                 ----                                   ||")
-      print("||                                                                        ||")
-      print("|| * ( b ) to go back to the main menu                                    || ")
-      print("||                                                                        ||")
+      print("││                 ******** Welcome to WhatABook ********                 ││")
+      print("││              *********************************************             ││")
+      print("││                            ┌────────────┐                              ││")
+      print("││                            │ Wish Lists │                              ││")
+      print("││                            └────────────┘                              ││")
+      print("││       -  Please enter the customer Id to see their wish list! -        ││")
+      print("││                                 ----                                   ││")
+      print("││                                                                        ││")
+      print("││ * ( b ) to go back to the main menu                                    ││ ")
+      print("││                                                                        ││")
       print(" \\\\                                 ____                                  //")
       print("    * ***************************************************************** *   ")
       print("")
@@ -200,13 +200,12 @@ def wishlist_search():
          print(customer["firstName"], customer["lastName"] + "'s Wish List: \n")
          # Display books from customer wishlist
          for book in customer["wishlist"]:
-            print("\n" + " - Book Title: ", book["title"] + "\n"
-               " - Genre:      ", book["genre"] + "\n"
-               " - Author: ", book["author"] + "\n"
-               " - BookId: ", book["bookId"] + "\n"
+            print("\n" + " ┌───╗ Book Title: ", book["title"] + "\n"
+               " │   ║ Genre:      ", book["genre"] + "\n"
+               " │   ║ Author:     " , book["author"] + "\n"
+               " └═══╝ Book ID:    ", book["bookId"] + "\n"
                "\n"
-               "       ********"
-               )
+               "       ********   ")
       else:
          # Clear Screen and display menu items
          os.system('cls' if os.name == 'nt' else 'clear')
@@ -224,19 +223,19 @@ while selection != "q":
    print("")
    print("    * *****************************     ****************************** *    ")
    print(" //                   ********************************                    \\\\")
-   print("||                 ******** Welcome to WhatABook ********                 ||")
-   print("||              *********************************************             ||")
-   print("||                                 ----                                   ||")
-   print("||                               | Menu |                                 ||")
-   print("||                                 ----                                   ||")
-   print("||    -  Please type-in the corresponding number to select an option! -   ||")
-   print("||                                 ----                                   ||")
-   print("||                                                                        ||")
-   print("|| * ( 1 ) View our entire book selection.                                ||")
-   print("|| * ( 2 ) View books by genre.                                           ||")
-   print("|| * ( 3 ) View books by author.                                          ||")
-   print("|| * ( 4 ) View Wishlist by CustomerId                                    ||")
-   print("|| * ( q ) to leave the program                                           ||")
+   print("││                 ******** Welcome to WhatABook ********                 ││")
+   print("││              *********************************************             ││")
+   print("││                               ┌──────┐                                 ││")
+   print("││                               │ Menu │                                 ││")
+   print("││                               └──────┘                                 ││")
+   print("││    -  Please type-in the corresponding number to select an option! -   ││")
+   print("││                                 ----                                   ││")
+   print("││                                                                        ││")
+   print("││ * ( 1 ) View our entire book selection.                                ││")
+   print("││ * ( 2 ) View books by genre.                                           ││")
+   print("││ * ( 3 ) View books by author.                                          ││")
+   print("││ * ( 4 ) View Wishlist by CustomerId                                    ││")
+   print("││ * ( q ) to leave the program                                           ││")
    print(" \\\\                                 ____                                  //")
    print("    * ***************************************************************** *   ")
    print("")
@@ -249,10 +248,10 @@ while selection != "q":
    if selection == "1":
       print("\n" + "   *** List of all Available Books ***" + "\n" )
       for book in books_col.find():
-         print("\n" + " - Book Title: ", book["title"] + "\n"
-               " - Genre:      ", book["genre"] + "\n"
-               " - Author:     " , book["author"] + "\n"
-               " - Book ID:    ", book["bookId"] + "\n"
+         print("\n" + " ┌───╗ Book Title: ", book["title"] + "\n"
+               " │   ║ Genre:      ", book["genre"] + "\n"
+               " │   ║ Author:     " , book["author"] + "\n"
+               " └═══╝ Book ID:    ", book["bookId"] + "\n"
                "\n"
                "       ********   ")
    # -=Genre Search=- #
