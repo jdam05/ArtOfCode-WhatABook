@@ -6,6 +6,9 @@
    Description: MongoDB Shell Scripts for the books and customers collections.
  */
 
+// Connection String
+// mongosh "mongodb+srv://buwebdev-cluster-1.9wmv0d7.mongodb.net/web335DB" --apiVersion 1 --username web335_user
+
 // Delete the books and customers collections.
 db.books.drop();
 db.customers.drop();
@@ -221,3 +224,11 @@ db.books.find({ genre: "Fantasy" });
 db.books.find({ author: "Sun Tzu" });
 // Displaying books by bookId
 db.books.find({ bookId: "1599869772" });
+// Dioplaying the books in the wishlist of a customer
+db.customers.find({ customerId: "c1001" }, { wishlist: 1 });
+// Add a book to the wishlist
+db.customers.updateOne( { customerId: "c1001" },
+	{ $push: { wishlist: { title: "The Silmarillion", genre: "Fantasy", author: "J. R. R. Tolkien", bookId: "0544338014" } } } );
+// Remove a book from the wishlist
+db.customers.updateOne({ customerId: 'c1001' }, { $pull: { wishlist: { bookId: '0544338014' } } });
+
